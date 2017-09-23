@@ -1,0 +1,57 @@
+<ion-view title="VisitaRio" hide-back-button="true" id="page6">
+  <ion-content padding="true" class="has-header">
+
+    <h3 id="visitaRio6-heading6" style="color:#000000;">Delegacias</h3>
+
+    <div id="visitaRio6-container4" class="creator-container">
+
+      <div class="list card" id="delegaciasDetalhe-card219" ng-repeat="delegacias in model.delegacias">
+
+        <div class=" item item-image">
+          <img  src="{{delegacias.foto}}" style="display:block; width: 100%; height: 150px; margin-left: auto; margin-right: auto;">
+        </div>
+        <ion-item class="item-icon-right" id="delegaciasdetalhe-list-item20"> {{delegacias.nome}}
+          <button ng-click="delegacias.detalhe = !delegacias.detalhe" class="icon ion-ios-arrow-down" style="background: none; border: none; " ></button>
+        </ion-item>
+        <div  ng-show="delegacias.detalhe" class="item item-body" id="delegaciasDetalhe-list-item-container1">
+          <div id="delegaciasDetalhe-markdown2" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Nome:</strong> {{delegacias.nome}}</p>
+          </div>
+          <div id="delegaciasDetalhe-markdown5" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Bairro:</strong> {{delegacias.bairro}}</p>
+          </div>
+          <div id="delegaciasDetalhe-markdown12" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Endereço:</strong> {{delegacias.endereco}}</p>
+          </div>
+          <div id="delegaciasDetalhe-markdown13" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Região:</strong> {{delegacias.regiao}}</p>
+          </div>
+          <div id="delegaciasDetalhe-markdown6" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Funcionamento:</strong> {{delegacias.funcionamento}}</p>
+          </div>
+          <div id="delegaciasDetalhe-markdown10" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Serviço:</strong> {{delegacias.servico}}</p>
+          </div>
+          <div id="delegaciasDetalhe-markdown11" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;"><strong>telefone:</strong> {{delegacias.telefone}}</p>
+          </div>
+          <a href="{{delegacias.url}}"  target="_blank" id="delegaciasDetalhe-button9" style="font-size:13px;" class="button button-assertive button-small button-block">IR AO SITE</a>
+          <a href="{{delegacias.mapa}}"  target="_blank"  style="font-size:13px;" class="button button-positive button-small button-block">VER NO MAPA</a>
+        </div>
+
+    </div>
+
+    <div id="visitaRio7-button-bar6" class="button-bar">
+      <a ui-sref="visitaRio2" id="visitaRio7-button23" class="button button-assertive  button-block icon ion-home"></a>
+      <a ui-sref="visitaRio" id="visitaRio7-button25" class="button button-assertive  button-block icon ion-android-exit"></a>
+    </div>
+
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,54 @@
+<ion-view title="VisitaRio" hide-back-button="true" id="page4">
+
+  <ion-content padding="true" class="has-header">
+
+    <h3 id="visitaRio4-heading4" style="color:#000000;">Hotéis</h3>
+
+    <div id="visitaRio4-container2" class="creator-container">
+
+      <div class="list card" id="hoteisDetalhe-card219" ng-repeat="hoteis in model.hoteis">
+        <div class=" item item-image">
+          <img  src="{{hoteis.foto}}" style="display:block; width: 100%; height: 150px; margin-left: auto; margin-right: auto;">
+        </div>
+        <ion-item class="item-icon-right" id="hoteisdetalhe-list-item20"> {{hoteis.nome}}
+          <button ng-click="hoteis.detalhe = !hoteis.detalhe" class="icon ion-ios-arrow-down" style="background: none; border: none; " ></button>
+        </ion-item>
+        <div  ng-show="hoteis.detalhe" class="item item-body" id="hoteisDetalhe-list-item-container1">
+          <div id="hoteisDetalhe-markdown2" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Nome:</strong> {{hoteis.nome}}</p>
+          </div>
+          <div id="hoteisDetalhe-markdown7" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Bairro:</strong> {{hoteis.bairro}}</p>
+          </div>
+          <div id="hoteisDetalhe-markdown5" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Endereço:</strong> {{hoteis.endereco}}</p>
+          </div>
+          <div id="hoteisDetalhe-markdown6" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Funcionamento:</strong> {{hoteis.funcionamento}}</p>
+          </div>
+          <div id="hoteisDetalhe-markdown11" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>telefone:</strong> {{hoteis.telefone}}</p>
+          </div>
+          <a href="{{hoteis.url}}"  target="_blank" id="hospitaisDetalhe-button9" style="font-size:13px;" class="button button-assertive button-small button-block">IR AO SITE</a>
+          <a href="{{hoteis.mapa}}"  target="_blank"  style="font-size:13px;" class="button button-positive button-small button-block">VER NO MAPA</a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="visitaRio4-button-bar3" class="button-bar">
+
+      <a ui-sref="visitaRio2" id="visitaRio4-button14" class="button button-assertive  button-block icon ion-home"></a>
+      <a ui-sref="visitaRio" id="visitaRio4-button16" class="button button-assertive  button-block icon ion-android-exit"></a>
+
+    </div>
+
+  </ion-content>
+
+</ion-view>

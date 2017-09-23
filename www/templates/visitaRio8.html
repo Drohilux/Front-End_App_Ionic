@@ -1,0 +1,57 @@
+<ion-view title="VisitaRio" hide-back-button="true" id="page8">
+
+  <ion-content padding="true" class="has-header">
+
+    <h3 id="visitaRio8-heading8" style="color:#000000;">Pontos Turísticos</h3>
+
+    <div id="visitaRio8-container6" class="creator-container">
+
+      <div class="list card" id="pontosDetalhe-card219" ng-repeat="pontos in model.pontos">
+
+        <div class=" item item-image">
+          <img  src="{{pontos.foto}}" style="display:block; width: 100%; height: 150px; margin-left: auto; margin-right: auto;">
+        </div>
+        <ion-item class="item-icon-right" id="pontosdetalhe-list-item20"> {{pontos.nome}}
+          <button ng-click="pontos.detalhe = !pontos.detalhe" class="icon ion-ios-arrow-down" style="background: none; border: none; " ></button>
+        </ion-item>
+        <div  ng-show="pontos.detalhe" class="item item-body" id="pontosDetalhe-list-item-container1">
+          <div id="pontosDetalhe-markdown2" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Nome:</strong> {{pontos.nome}}</p>
+          </div>
+          <div id="pontosDetalhe-markdown5" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Endereço:</strong> {{pontos.endereco}}</p>
+          </div><div id="pontosDetalhe-markdown12" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;font-size:13px;">
+            <strong>Bairro:</strong> {{pontos.bairro}}</p>
+        </div>
+
+          <div id="pontosDetalhe-markdown6" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Funcionamento:</strong> {{pontos.funcionamento}}</p>
+          </div>
+          <div id="pontosDetalhe-markdown10" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Serviço:</strong> {{pontos.servico}}</p>
+          </div>
+          <div id="pontosDetalhe-markdown11" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>telefone:</strong> {{pontos.telefone}}</p>
+          </div>
+          <a href="{{pontos.url}}"  target="_blank" id="pontosDetalhe-button9" style="font-size:13px;" class="button button-assertive button-small button-block">IR AO SITE</a>
+          <a href="{{pontos.mapa}}"  target="_blank"  style="font-size:13px;" class="button button-positive button-small button-block">VER NO MAPA</a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="visitaRio8-button-bar7" class="button-bar">
+      <a ui-sref="visitaRio2" id="visitaRio8-button26" class="button button-assertive  button-block icon ion-home"></a>
+      <a ui-sref="visitaRio" id="visitaRio8-button28" class="button button-assertive  button-block icon ion-android-exit"></a>
+    </div>
+
+  </ion-content>
+
+</ion-view>

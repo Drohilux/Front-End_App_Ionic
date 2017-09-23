@@ -1,0 +1,56 @@
+<ion-view title="VisitaRio" hide-back-button="true" id="page9">
+
+  <ion-content padding="true" class="has-header">
+
+    <h3 id="visitaRio9-heading9" style="color:#000000;">Banheiros</h3>
+
+    <div id="visitaRio9-container7" class="creator-container">
+
+      <div class="list card" id="banheirosDetalhe-card219" ng-repeat="banheiros in model.banheiros">
+
+        <div class=" item item-image">
+          <img  src="{{banheiros.foto}}" style="display:block; width: 100%; height: 150px; margin-left: auto; margin-right: auto;">
+        </div>
+        <ion-item class="item-icon-right" id="banheirosdetalhe-list-item20"> {{banheiros.nome}}
+          <button ng-click="banheiros.detalhe = !banheiros.detalhe" class="icon ion-ios-arrow-down" style="background: none; border: none; " ></button>
+        </ion-item>
+        <div  ng-show="banheiros.detalhe" class="item item-body" id="banheirosDetalhe-list-item-container1">
+          <div id="banheirosDetalhe-markdown2" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Nome:</strong> {{banheiros.nome}}</p>
+          </div>
+          <div id="banheirosDetalhe-markdown5" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Endereço:</strong> {{banheiros.endereco}}</p>
+          </div><div id="banheirosDetalhe-markdown12" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;font-size:13px;">
+            <strong>Bairro:</strong> {{banheiros.bairro}}</p>
+        </div>
+
+          <div id="banheirosDetalhe-markdown6" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Funcionamento:</strong> {{banheiros.funcionamento}}</p>
+          </div>
+          <div id="banheirosDetalhe-markdown10" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Serviço:</strong> {{banheiros.servico}}</p>
+          </div>
+          <div id="banheirosDetalhe-markdown11" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>telefone:</strong> {{banheiros.telefone}}</p>
+          </div>
+            <a href="{{banheiros.mapa}}"  target="_blank"  style="font-size:13px;" class="button button-positive button-small button-block">VER NO MAPA</a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="visitaRio9-button-bar8" class="button-bar">
+      <a ui-sref="visitaRio2" id="visitaRio9-button29" class="button button-assertive  button-block icon ion-home"></a>
+      <a ui-sref="visitaRio" id="visitaRio9-button31" class="button button-assertive  button-block icon ion-android-exit"></a>
+    </div>
+
+  </ion-content>
+
+</ion-view>

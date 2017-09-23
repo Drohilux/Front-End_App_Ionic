@@ -1,0 +1,63 @@
+<ion-view title="VisitaRio" hide-back-button="true" id="page5">
+
+  <ion-content padding="true" class="has-header">
+
+    <h3 id="visitaRio5-heading5" style="color:#000000;">Eventos</h3>
+
+    <div id="visitaRio5-container3" class="creator-container">
+
+      <div class="list card" id="eventosDetalhe-card219" ng-repeat="eventos in model.eventos">
+
+        <div class=" item item-image">
+          <img  src="{{eventos.foto}}" style="display:block; width: 100%; height: 150px; margin-left: auto; margin-right: auto;">
+        </div>
+        <ion-item class="item-icon-right" id="eventosdetalhe-list-item20"> {{eventos.nome}}
+          <button ng-click="eventos.detalhe = !eventos.detalhe" class="icon ion-ios-arrow-down" style="background: none; border: none; " ></button>
+        </ion-item>
+        <div  ng-show="eventos.detalhe" class="item item-body" id="eventosDetalhe-list-item-container1">
+          <div id="eventosDetalhe-markdown2" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Nome:</strong> {{eventos.nome}}</p>
+          </div>
+          <div id="eventosDetalhe-markdown5" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Endereço:</strong> {{eventos.endereco}}</p>
+          </div>
+          <div id="eventosDetalhe-markdown6" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Bairro:</strong> {{eventos.bairro}}</p>
+          </div>
+          <div id="eventosDetalhe-markdown10" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Local:</strong> {{eventos.local}}</p>
+          </div>
+          <div id="eventosDetalhe-markdown12" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Tipo:</strong> {{eventos.tipo}}</p>
+          </div>
+          <div id="eventosDetalhe-markdown13" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Horário:</strong> {{eventos.horario}}</p>
+          </div>
+          <div id="eventosDetalhe-markdown14" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Custo:</strong> {{eventos.custo}}</p>
+          </div>
+          <div id="eventosDetalhe-markdown11" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>telefone:</strong> {{eventos.telefone}}</p>
+          </div>
+          <a href="{{eventos.url}}"  target="_blank" id="eventosDetalhe-button9" style="font-size:13px;" class="button button-assertive button-small button-block">IR AO SITE</a>
+          <a href="{{eventos.mapa}}"  target="_blank"  style="font-size:13px;" class="button button-positive button-small button-block">VER NO MAPA</a>
+        </div>
+      </div>
+
+      </div>
+
+    <div id="visitaRio5-button-bar4" class="button-bar">
+      <a ui-sref="visitaRio2" id="visitaRio5-button17" class="button button-assertive  button-block icon ion-home"></a>
+      <a ui-sref="visitaRio" id="visitaRio5-button19" class="button button-assertive  button-block icon ion-android-exit"></a>
+    </div>
+
+  </ion-content>
+</ion-view>

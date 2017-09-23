@@ -1,0 +1,56 @@
+<ion-view title="VisitaRio" hide-back-button="true" id="page7">
+  <ion-content padding="true" class="has-header">
+
+    <h3 id="visitaRio7-heading7" style="color:#000000;">Hospitais</h3>
+
+    <div id="visitaRio6-container5" class="creator-container">
+
+      <div class="list card" id="hospitaisDetalhe-card219" ng-repeat="hospital in model.hospitais">
+
+        <div class=" item item-image">
+          <img  src="{{hospital.foto}}" style="display:block; width: 100%; height: 150px; margin-left: auto; margin-right: auto;">
+        </div>
+        <ion-item class="item-icon-right" id="hospitaisdetalhe-list-item20"> {{hospital.nome}}
+          <button ng-click="hospital.detalhe = !hospital.detalhe" class="icon ion-ios-arrow-down" style="background: none; border: none; " ></button>
+        </ion-item>
+        <div  ng-show="hospital.detalhe" class="item item-body" id="hospitaisDetalhe-list-item-container1">
+          <div id="hospitaisDetalhe-markdown2" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Nome:</strong> {{hospital.nome}}</p>
+          </div>
+          <div id="hospitaisDetalhe-markdown5" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Endereço:</strong> {{hospital.endereco}}</p>
+          </div><div id="hospitaisDetalhe-markdown12" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;font-size:13px;">
+            <strong>Bairro:</strong> {{hospital.bairro}}</p>
+        </div>
+
+          <div id="hospitaisDetalhe-markdown6" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Funcionamento:</strong> {{hospital.funcionamento}}</p>
+          </div>
+          <div id="hospitaisDetalhe-markdown10" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Serviço:</strong> {{hospital.servico}}</p>
+          </div>
+          <div id="hospitaisDetalhe-markdown11" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>telefone:</strong> {{hospital.telefone}}</p>
+          </div>
+          <a href="{{hospital.url}}"  target="_blank" id="hospitaisDetalhe-button9" style="font-size:13px;" class="button button-assertive button-small button-block">IR AO SITE</a>
+          <a href="{{hospital.mapa}}"  target="_blank"  style="font-size:13px;" class="button button-positive button-small button-block">VER NO MAPA</a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="visitaRio7-button-bar6" class="button-bar">
+
+      <a ui-sref="visitaRio2" id="visitaRio7-button23" class="button button-assertive  button-block icon ion-home"></a>
+      <a ui-sref="visitaRio" id="visitaRio7-button25" class="button button-assertive  button-block icon ion-android-exit"></a>
+
+    </div>
+  </ion-content>
+</ion-view>

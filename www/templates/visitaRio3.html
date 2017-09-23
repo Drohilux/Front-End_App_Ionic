@@ -1,0 +1,48 @@
+<ion-view title="VisitaRio" hide-back-button="true" id="page3">
+
+  <ion-content padding="true" class="has-header">
+    <h3 id="visitaRio3-heading3" style="color:#000000;">Praias</h3>
+
+    <div id="visitaRio3-container1" class="creator-container">
+
+      <div class="list card" id="praiasDetalhe-card219" ng-repeat="praias in model.praias">
+        <div class=" item item-image">
+          <img  src="{{praias.foto}}" style="display:block; width: 100%; height: 150px; margin-left: auto; margin-right: auto;">
+        </div>
+        <ion-item class="item-icon-right" id="hospitaisdetalhe-list-item20"> {{praias.nome}}
+          <button ng-click="praias.detalhe = !praias.detalhe" class="icon ion-ios-arrow-down" style="background: none; border: none; " ></button>
+        </ion-item>
+        <div  ng-show="praias.detalhe" class="item item-body" id="hospitaisDetalhe-list-item-container1">
+          <div id="praiasDetalhe-markdown2" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Nome:</strong> {{praias.nome}}</p>
+          </div>
+          <div id="praiasDetalhe-markdown5" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Endereço:</strong> {{praias.endereco}}</p>
+          </div>
+          <div id="praiasDetalhe-markdown6" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Bairro:</strong> {{praias.bairro}}</p>
+          </div>
+          <div id="praiasDetalhe-markdown7" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;font-size:13px;">
+              <strong>Região:</strong> {{praias.regiao}}</p>
+          </div>
+          <a href="{{praias.mapa}}"  target="_blank"  style="font-size:13px;" class="button button-positive button-small button-block">VER NO MAPA</a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="visitaRio3-button-bar2" class="button-bar">
+
+      <a ui-sref="visitaRio2" id="visitaRio3-button11" class="button button-assertive  button-block icon ion-home"></a>
+      <a ui-sref="visitaRio" id="visitaRio3-button13" class="button button-assertive  button-block icon ion-android-exit"></a>
+
+    </div>
+
+  </ion-content>
+
+</ion-view>
